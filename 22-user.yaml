@@ -1,3 +1,7 @@
+
+
+# commond: ansible-playbook -i inventory.ini 22-user.yaml
+
 - name:  user creation
   hosts: local
   connection: local
