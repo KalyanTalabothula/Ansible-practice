@@ -1,4 +1,8 @@
-plugin: amazon.aws.aws_ec2
+
+#  🔍 ansible aws dynamic inventory, Important concept for interview
+
+
+plugin: amazon.aws.aws_ec2 
 regions:
 - us-east-1
 keyed_groups:
@@ -14,3 +18,23 @@ hostnames:
 compose:
   # This sets the `ansible_host` variable to connect with the private IP address without changing the hostname.
   ansible_host: private_ip_address
+
+
+# ansible queries the ec2 instances based on some criteria...
+# eppudu ansible ec2 ki connect avvali kabatti, we need boto3 botocore and Dynamic inventory ante yela chestam.???Mana business undedhi us-east-1 region lo, e region lo unte anni servers ni tisukovachha, different project kuda run avutu untaii. So, we need to filter instances, yela filter chestam??
+# 1st running instance ayye undali, avi mana project vi ayye undali, for example miru frontend lo changes chestu unte, frontend servers ni target chesi unte, we can filter using name---> Frontend. or mananiki inka kavali ante different different tags use chesukoni filter chesukovachhu. 
+
+# This is how, we filter even in the console kada... 
+# Now, dinine tisuku velli code lo pettanu ante ansible dynamic gha velli, aa hosts query chesi, aa IP-address techhukoni vatiki mana playbook apply chesu undhi. 
+
+# plugin: amazon.aws.aws_ec2 edi yekkada untadi??
+# manam install chesina e librays lo untadi, i mean boto3 and botocore lo oka plugin ante. 
+
+# we have come conditions, how to connect ani...
+
+# Plugin : means adding extra functionality to our code, Generally programming lo vatiini librarys antaru manam dependencies antam kada manam antam nodejs lo. Everything we can't write from scratch, ansible eppudu yela connect avvalia AWS ki andhi, manam from the scratch rayamu. So that is why we using plugins. 
+
+# For example ansible velli GitHub ni connect avvali ante we need GitHub plugin ala ana mata.
+
+# Minimal Example:
+# Fetch all hosts in us-east-1, the hostname is the public DNS if it exists, otherwise the private IP address.
