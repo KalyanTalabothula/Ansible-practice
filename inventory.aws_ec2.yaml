@@ -23,9 +23,9 @@ compose:
 
 #  Autoscalling --> when traffic increases, infra also increases. when traffic infra also decreses.  For example tarffic yekkuva ghaa unnappudu 100 servers unne, traffic yekkuva gha unne vatillo edo chinna problems vachhimdhi, but, eppudu aa 100 servers lo at a time yemi ina changes cheyali ante, static inventory ante dhi use avvadu. So Dynamic inventory anedi use avutumdhi. 
 
+# ansible queries the ec2 instances based on some criteria... So e situation lo ye server lo yee servers unnae vati IP-address yentiandhi manam quary chesukoni dyanamic gha akkada nimchi manam techhukovali. 
 
-# ansible queries the ec2 instances based on some criteria...
-# eppudu ansible ec2 ki connect avvali kabatti, we need boto3 botocore and Dynamic inventory ante yela chestam.???Mana business undedhi us-east-1 region lo, e region lo unte anni servers ni tisukovachha, different project kuda run avutu untaii. So, we need to filter instances, yela filter chestam??
+# So, eppudu ansible ec2 ki connect avvali kabatti, we need boto3 botocore and Dynamic inventory ante yela chestam.???Mana business undedhi us-east-1 region lo, e region lo unte anni servers ni tisukovachha, different project kuda run avutu untaii. So, we need to filter instances, yela filter chestam??
 # 1st running instance ayye undali, avi mana project vi ayye undali, for example miru frontend lo changes chestu unte, frontend servers ni target chesi unte, we can filter using name---> Frontend. or mananiki inka kavali ante different different tags use chesukoni filter chesukovachhu. 
 
 # This is how, we filter even in the console kada... 
