@@ -42,3 +42,6 @@ compose:
 
 # Minimal Example:
 # Fetch all hosts in us-east-1, the hostname is the public DNS if it exists, otherwise the private IP address.
+
+# inventory.aws_ec2.yaml --> ela ney create cheyali same ee name tho ney.
+
